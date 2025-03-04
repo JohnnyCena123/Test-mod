@@ -33,6 +33,7 @@ class $modify(MyPlayLayer, PlayLayer) {
 #include <Geode/modify/PauseLayer.hpp>
 class $modify(MyPauseLayer, PauseLayer) {
 void customSetup() {
+  PauseLayer::customSetup();
   playLayer->getChildByID("progress-bar")->setPositionX(120);
   playLayer->getChildByID("precentage-label")->setPositionX(231);
 }
