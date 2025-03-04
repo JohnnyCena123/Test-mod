@@ -12,4 +12,10 @@ FLAlertLayer::create("Hello world",
 )->show();
 }
 
+void onOptions(CCObject* sender) {
+  FLAlertLayer::create("Sike!", 
+"You can't change the options.", 
+"Close"
+)->show();
+}
 };
