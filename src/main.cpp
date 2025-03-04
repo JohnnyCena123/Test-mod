@@ -27,5 +27,6 @@ class $modify(MyPlayLayer, PlayLayer) {
     if (!PlayLayer::init(level, useReplay, dontCreateObjects)) return false;
       this->getChildByID("progress-bar")->setPositionX(120);
       this->getChildByID("precentage-label")->setPositionX(231);
+    return true;
       }
 };
