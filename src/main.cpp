@@ -24,7 +24,7 @@ void onOptions(CCObject* sender) {
 #include <Geode/modify/PlayLayer.hpp>
 class $modify(MyPlayLayer, PlayLayer) {
   bool init(GJGameLevel* level, bool useReplay, bool dontCreateObjects) {
-    if (!PlayLayer::init(GJGameLevel* level, bool useReplay, bool dontCreateObjects) return false;
+    if (!PlayLayer::init(level, useReplay, dontCreateObjects)) return false;
       this->getChildByID("progress-bar")->setPositionX(120);
       this->getChildByID("precentage-label")->setPositionX(231);
       }
