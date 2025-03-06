@@ -20,21 +20,13 @@ void onOptions(CCObject* sender) {
 }
 };
 
-PlayLayer* playLayer;
+
 #include <Geode/modify/PlayLayer.hpp>
 class $modify(MyPlayLayer, PlayLayer) {
   bool init(GJGameLevel* level, bool useReplay, bool dontCreateObjects) {
     if (!PlayLayer::init(level, useReplay, dontCreateObjects)) return false;
-      playLayer = this;
+    this->getChildByID("progress-bar")->setPositionX(120);
+    this->getChildByID("precentage-label")->setPositionX(231);
     return true;
-      }
-};
-
-#include <Geode/modify/PauseLayer.hpp>
-class $modify(MyPauseLayer, PauseLayer) {
-void customSetup() {
-  PauseLayer::customSetup();
-  playLayer->getChildByID("progress-bar")->setPositionX(120);
-  playLayer->getChildByID("precentage-label")->setPositionX(231);
-}
+  }
 };
